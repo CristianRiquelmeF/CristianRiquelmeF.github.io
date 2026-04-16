@@ -63,6 +63,15 @@ Para ilustrar mi crecimiento técnico en el desarrollo backend, he seleccionado 
 
 ---
 
+## Análisis FODA Personal
+
+- **Fortalezas:** Visión interdisciplinaria. Combino el rigor metodológico de las ciencias sociales con habilidades técnicas avanzadas (Python, SQL, Django). Traduzco necesidades humanas/sociales en software robusto.
+- **Debilidades:** Menor exposición a frameworks avanzados de Frontend (ej. React/Vue), dado que mi especialización y fortaleza actual radican fuertemente en la lógica de Datos y Backend.
+- **Oportunidades:** Auge de la digitalización de servicios e integración de modelos de Machine Learning en aplicaciones web tradicionales, un espacio ideal para mi perfil mixto.
+- **Amenazas:** Saturación de perfiles Junior estandarizados en el mercado tech, lo que exige destacar constantemente el valor agregado de mi formación en Data y Sociología para diferenciarme.
+
+---
+
 ## Contacto
 * **Email:** cristianriquelme.ef@gmail.com
 * **LinkedIn:** [in/cristian-riquelme-fernandez](https://www.linkedin.com/in/cristianriquelmef)
