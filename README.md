@@ -51,7 +51,7 @@ Para ilustrar mi crecimiento técnico en el desarrollo backend, he seleccionado 
 * **Solución propuesta:** Implementé la arquitectura MVT (Model-View-Template) de Django. Utilicé Vistas Basadas en Clases (CBVs) para estandarizar el CRUD, apliqué `LoginRequiredMixin` para la protección de rutas, y combiné el ORM de Django con consultas SQL en crudo (`raw()`) para la manipulación avanzada de datos.
 * **Herramientas técnicas utilizadas:** Python 3, Django 4.x, SQLite, HTML5, CSS3, Git y GitHub (control de versiones mediante ramas).
 * **Principales aprendizajes alcanzados:** 
-  * Comprensión profunda de cómo el backend se comunica con el frontend mediante el paso de contextos y etiquetas de plantillas (`{% %}`).
+  * Comprensión profunda de cómo el backend se comunica con el frontend mediante el paso de contextos y etiquetas de plantillas.
   * Dominio del sistema de migraciones para reflejar cambios en la base de datos sin perder información.
   * Internalización de conceptos de seguridad web como la protección mediante Tokens CSRF.
 * **Métricas de impacto logradas:** 
