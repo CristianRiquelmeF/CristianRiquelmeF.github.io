@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristian Riquelme Fernández | Data Science & Sociología</title>
+  <meta name="description" content="Portafolio de Cristian Riquelme Fernández. Sociólogo con formación en Data Science, análisis de datos, machine learning, NLP, BI y backend con Python." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #0f766e;
+      --primary-2: #2563eb;
+      --accent: #14b8a6;
+      --light: #f8fafc;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f4f6;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .brand {
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #dbeafe;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #0f766e 55%, #2563eb 100%);
+      color: white;
+      padding: 90px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin: 0 0 14px;
+      font-weight: 800;
+    }
+
+    .hero h2 {
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 500;
+      color: #dbeafe;
+      margin: 0 0 22px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.05rem;
+      color: #e5eefc;
+      margin-bottom: 28px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #dbeafe;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.96rem;
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #0f172a;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      color: #0f172a;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: #ecfeff;
+      color: #115e59;
+      border: 1px solid #ccfbf1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .highlight-item {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .highlight-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+      color: #0f172a;
+    }
+
+    .project-card p {
+      color: #4b5563;
+      font-size: 0.97rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 18px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #dbeafe;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      font-weight: 600;
+      color: var(--primary-2);
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .stack-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+
+    .stack-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #4b5563;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #134e4a);
+      color: white;
+      border-radius: 24px;
+      padding: 42px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .contact-box p {
+      max-width: 720px;
+      margin: 0 auto 22px;
+      color: #dbeafe;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px 14px 34px;
+      color: #6b7280;
+      font-size: 0.92rem;
+    }
+
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #0f766e;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .projects-grid,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">Cristian Riquelme Fernández</div>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Sociología + Data Science + Soluciones Aplicadas</div>
+        <h1>Cristian Riquelme</h1>
+        <h2>Sociólogo + Data Science | Análisis de Datos, Machine Learning, NLP y Backend con Python</h2>
+        <p>
+          Transformo datos complejos en información clara y accionable mediante análisis, modelado predictivo,
+          procesamiento de lenguaje natural y visualización. Mi perfil integra investigación social,
+          ciencia de datos y desarrollo de soluciones aplicadas para la toma de decisiones.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-secondary" href="https://github.com/CristianRiquelmeF" target="_blank">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/cristian-riquelmef" target="_blank">LinkedIn</a>
+          <a class="btn btn-secondary" href="mailto:cristianriquelme.ef@gmail.com">Contacto</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Resumen profesional</h3>
+        <ul>
+          <li>📊 Análisis de datos, ETL, dashboards y visualización estratégica</li>
+          <li>🤖 Machine Learning supervisado y no supervisado</li>
+          <li>🧠 NLP en español con Transformers y análisis de sentimiento</li>
+          <li>🛠️ Desarrollo backend con Python, Flask y Django</li>
+          <li>🌍 Enfoque interdisciplinario entre ciencias sociales y tecnología</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-subtitle">
+        Mi propuesta de valor está en conectar el rigor metodológico de la investigación social con herramientas de análisis, machine learning y desarrollo, para construir soluciones útiles en contextos reales.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3>Perfil</h3>
+          <p>
+            Soy <strong>Sociólogo con formación en Data Science</strong> y experiencia en análisis de datos, investigación aplicada
+            y desarrollo de soluciones analíticas end-to-end. Combino metodologías cuantitativas y cualitativas con herramientas como
+            <strong>Python, R, SQL, Machine Learning, NLP, Power BI y backend con Python</strong>.
+          </p>
+          <p>
+            He trabajado en proyectos de segmentación, riesgo crediticio, análisis de sentimiento,
+            ETL, dashboards y modelado predictivo, transformando datos estructurados y no estructurados en información útil para apoyar decisiones.
+          </p>
+          <div class="pill-list">
+            <span class="pill">Python</span>
+            <span class="pill">R</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Machine Learning</span>
+            <span class="pill">NLP</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Django</span>
+            <span class="pill">Flask</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Diferencial profesional</h3>
+          <div class="highlight-list">
+            <div class="highlight-item">
+              <strong>Visión interdisciplinaria</strong>
+              Integro ciencias sociales, analítica y tecnología para comprender mejor los problemas y diseñar soluciones más contextualizadas.
+            </div>
+            <div class="highlight-item">
+              <strong>Enfoque aplicado</strong>
+              Desarrollo proyectos orientados a transformar datos en decisiones, conectando análisis técnico con utilidad real.
+            </div>
+            <div class="highlight-item">
+              <strong>Perfil híbrido</strong>
+              Combino análisis, modelamiento, visualización y backend para construir soluciones de punta a punta.
+            </div>
+            <div class="highlight-item">
+              <strong>Comunicación de hallazgos</strong>
+              Traduzco resultados técnicos en información comprensible para contextos organizacionales, sociales y digitales.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="container">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <p class="section-subtitle">
+        Selección de proyectos que reflejan mi trabajo en NLP, machine learning, segmentación, ingeniería aplicada y análisis con enfoque interdisciplinario.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Termómetro Digital de Audiencias</h3>
+          <p>
+            Solución de NLP para analizar comentarios de YouTube mediante web scraping, modelos Transformer en español
+            y visualización analítica. Convierte opinión pública digital en información accionable para monitoreo de audiencias.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Transformers</span>
+            <span class="tag">Web Scraping</span>
+            <span class="tag">YouTube</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/CristianRiquelmeF/social-listening-yt-analytics" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Segmentación de Clientes con K-Modes</h3>
+          <p>
+            Modelo de segmentación no supervisada en R para identificar perfiles de clientes a partir de variables categóricas.
+            Incorpora un enfoque sociológico en el feature engineering, transformando datos demográficos en segmentos interpretables
+            según estructura familiar y momento de vida.
+          </p>
+          <div class="tags">
+            <span class="tag">R</span>
+            <span class="tag">K-Modes</span>
+            <span class="tag">Clustering</span>
+            <span class="tag">Segmentación</span>
+            <span class="tag">Sociología</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/CristianRiquelmeF/Segmentacion-clientes-Kmodes/tree/main" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Modelo de Riesgo Crediticio</h3>
+          <p>
+            Proyecto de clasificación binaria para estimar probabilidad de impago utilizando Python y Scikit-learn.
+            Incluye EDA, comparación de algoritmos, optimización de hiperparámetros y selección del mejor modelo,
+            alcanzando un AUC-ROC de 0.86.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">Risk Modeling</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/CristianRiquelmeF/riesgo_crediticio_ml_modelos" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>API de Diagnóstico con Flask, Docker y CI/CD</h3>
+          <p>
+            Implementación end-to-end de un modelo de clasificación de cáncer de mama basado en datos abiertos,
+            expuesto mediante API RESTful con Flask, containerizado con Docker y automatizado con GitHub Actions.
+          </p>
+          <div class="tags">
+            <span class="tag">Flask</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">API</span>
+            <span class="tag">MLOps</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/CristianRiquelmeF/api-breast-cancer" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <h2 class="section-title">Stack y herramientas</h2>
+      <p class="section-subtitle">
+        Tecnologías y entornos con los que desarrollo proyectos de análisis, modelado, visualización y despliegue.
+      </p>
+
+      <div class="stack-grid">
+        <div class="card stack-card">
+          <h3>Datos y análisis</h3>
+          <ul>
+            <li>Python, R, SQL</li>
+            <li>Pandas, NumPy</li>
+            <li>Power BI, Tableau</li>
+            <li>Matplotlib, Seaborn</li>
+            <li>SPSS, JASP, Atlas.ti</li>
+          </ul>
+        </div>
+
+        <div class="card stack-card">
+          <h3>Machine Learning y NLP</h3>
+          <ul>
+            <li>Scikit-learn</li>
+            <li>TensorFlow / Keras</li>
+            <li>XGBoost, LightGBM, CatBoost</li>
+            <li>Transformers, pysentimiento</li>
+            <li>K-Means, K-Modes, DBSCAN, PCA</li>
+          </ul>
+        </div>
+
+        <div class="card stack-card">
+          <h3>Backend y despliegue</h3>
+          <ul>
+            <li>Django, Flask</li>
+            <li>APIs REST</li>
+            <li>MySQL, PostgreSQL, SQL Server</li>
+            <li>BigQuery</li>
+            <li>Docker, GitHub Actions, Git/GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="contact-box">
+        <h2>¿Conversemos?</h2>
+        <p>
+          Si buscas un perfil que combine análisis de datos, investigación aplicada y desarrollo de soluciones con Python,
+          estaré encantado de conectar.
+        </p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:cristianriquelme.ef@gmail.com">Enviar email</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/cristian-riquelmef" target="_blank">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/CristianRiquelmeF" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Cristian Riquelme Fernández · Portafolio personal en GitHub Pages
+  </footer>
+
+  <button class="top-btn" id="topBtn">↑</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
