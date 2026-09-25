@@ -431,3 +431,62 @@ footer {
     padding-top: 70px;
   }
 }
+
+/* ============================================
+   REDUCCIÓN DE ESPACIOS - Mejor flujo visual
+   ============================================ */
+
+/* Hero más compacto */
+.hero {
+  padding: 55px 0 45px;
+}
+
+/* Secciones más ajustadas */
+section {
+  padding: 48px 0;
+}
+
+/* Títulos de sección más compactos */
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  margin-bottom: 24px;
+}
+
+/* Tarjetas y proyectos más compactos */
+.card {
+  padding: 22px;
+}
+
+.projects-grid {
+  gap: 22px;
+}
+
+/* Ajustes adicionales en pantallas grandes */
+@media (min-width: 900px) {
+  .hero {
+    padding: 50px 0 40px;
+  }
+  
+  section {
+    padding: 52px 0;
+  }
+}
+
+/* Móvil: aún más compacto */
+@media (max-width: 768px) {
+  .hero {
+    padding: 42px 0 32px;
+  }
+  
+  section {
+    padding: 36px 0;
+  }
+  
+  .section-title {
+    font-size: 1.55rem;
+  }
+}
