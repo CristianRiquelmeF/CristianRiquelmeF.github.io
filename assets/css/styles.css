@@ -494,3 +494,25 @@ section {
     font-size: 1.5rem;
   }
 }
+
+
+/* ============================================
+   REDUCIR ESPACIO ENTRE "SOBRE MÍ" Y "PROYECTOS"
+   ============================================ */
+#sobre-mi {
+  padding-bottom: 16px;   /* reduce el espacio inferior de Sobre mí */
+}
+
+#proyectos {
+  padding-top: 16px;      /* reduce el espacio superior de Proyectos */
+}
+
+/* Versión aún más agresiva (si quieres más cerca todavía) */
+@media (min-width: 900px) {
+  #sobre-mi {
+    padding-bottom: 10px;
+  }
+  #proyectos {
+    padding-top: 10px;
+  }
+}
