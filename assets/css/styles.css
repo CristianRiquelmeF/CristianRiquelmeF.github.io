@@ -516,3 +516,45 @@ section {
     padding-top: 10px;
   }
 }
+
+/* ============================================
+   Ajuste del Hero (más centrado y bonito)
+   ============================================ */
+.hero {
+  padding: 50px 0 40px;
+  text-align: center;              /* centra todo el texto */
+}
+
+.hero .container > div {
+  max-width: 780px;
+  margin: 0 auto;                  /* centra el contenido */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.cta-group {
+  justify-content: center;         /* centra los botones */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* En pantallas muy grandes */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3.1rem;
+  }
+}
