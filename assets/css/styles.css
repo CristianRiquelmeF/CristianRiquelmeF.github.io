@@ -299,8 +299,8 @@ section {
    ============================================ */
 .project-image {
   width: 100%;
-  height: auto;             /* sin altura máxima fija */
-  max-height: 420px;        /* límite muy alto */
+  max-height: 300px;        /* ← más grande en escritorio */
+  height: auto;
   object-fit: contain;
   background: #f8fafc;
   border-radius: 12px;
@@ -308,6 +308,16 @@ section {
   border: 1px solid #e5e7eb;
   padding: 10px;
   display: block;
+}
+
+/* ============================================
+   Móvil (más alto para que no se recorten)
+   ============================================ */
+@media (max-width: 768px) {
+  .project-image {
+    max-height: 420px;      /* más alto en celular */
+    padding: 8px;
+  }
 }
 
 .tags {
