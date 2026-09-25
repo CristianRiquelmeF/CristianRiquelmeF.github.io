@@ -133,10 +133,9 @@
   <img src="assets/img/dash-observatorio.png" alt="Dashboard Observatorio de Prensa: Agenda Setting y Framing con IA" class="project-image">
   <h3>Observatorio de Prensa: Agenda Setting y Framing de Medios Chilenos con IA</h3>
   <p>
-    Desarrollo de un pipeline de datos serverless end-to-end que automatiza el estudio de 
+    Desarrollo de un pipeline ETL de datos que automatiza el estudio de 
     la agenda mediática en Chile. El proyecto extrae diariamente titulares de medios independientes 
-    vía RSS con Python, los clasifica con la API de Gemini mediante un prompt restrictivo (taxonomía 
-    cerrada de 18 temas, sentimiento y nivel de polarización), los almacena en PostgreSQL (Supabase) y 
+    vía RSS con Python, los clasifica con la API de Gemini mediante un prompt restrictivo, los almacena en PostgreSQL y 
     los visualiza en un dashboard de Power BI. El análisis responde qué temas concentran la cobertura, 
     con qué tono aborda cada medio la información y qué nivel de polarización presenta el debate.
   </p>
@@ -182,8 +181,8 @@
   <p>
     Desarrollo de un agente de IA autónomo para ejecutar ciclos de Análisis Exploratorio de Datos (EDA) 
     sobre archivos CSV y Excel mediante lenguaje natural. Implementa Function Calling nativo con Gemini API 
-    para orquestar herramientas de Python (Pandas, Matplotlib) sin depender de frameworks de caja negra. 
-    La arquitectura destaca por su enrutamiento dinámico de archivos, aislamiento de artefactos y programación defensiva, 
+    para orquestar herramientas de Python sin depender de frameworks de caja negra. 
+    La arquitectura destaca por su enrutamiento dinámico de archivos, programación defensiva, 
     con los límites del razonamiento del modelo documentados y probados de forma explícita.
   </p>
   <div class="tags">
