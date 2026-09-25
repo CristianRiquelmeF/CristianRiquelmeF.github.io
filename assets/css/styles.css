@@ -299,13 +299,15 @@ section {
    ============================================ */
 .project-image {
   width: 100%;
-  height: 220px;           /* altura fija para uniformidad */
-  object-fit: cover;       /* mejor que contain */
+  max-height: 240px;        /* altura máxima, no fija */
+  height: auto;             /* mantiene proporción */
+  object-fit: contain;      /* NO recorta la imagen */
   background: #f8fafc;
   border-radius: 12px;
   margin-bottom: 16px;
   border: 1px solid #e5e7eb;
-  padding: 8px;
+  padding: 10px;
+  display: block;
 }
 
 .tags {
