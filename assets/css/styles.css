@@ -558,3 +558,12 @@ section {
     font-size: 3.1rem;
   }
 }
+
+/* ============================================
+   Evitar salto de línea en la descripción de Proyectos
+   ============================================ */
+#proyectos .section-subtitle {
+  max-width: 100%;     /* más ancho = menos saltos de línea */
+  margin-left: auto;
+  margin-right: auto;
+}
